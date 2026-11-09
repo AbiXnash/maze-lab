@@ -20,7 +20,7 @@ public final class Renderer extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         synchronized (state) {
-            int tile = Math.max(1, Math.min(getWidth() / Maze.COLS, getHeight() / (Maze.ROWS + 1)));
+            int tile = 16;
             int light = Lantern.radius(state.secondsSinceFlare);
             System.out.println("frame light=" + light + " tile=" + tile);
             int pc = (int) Math.floor(state.px);
