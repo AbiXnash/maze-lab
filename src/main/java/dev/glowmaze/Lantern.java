@@ -4,7 +4,7 @@ package dev.glowmaze;
 public final class Lantern {
     public static final int FULL = 5;
     public static final int MIN = 2;
-    public static final double DIM_EVERY = 20.0;
+    public static final double DIM_EVERY = 10.0;
 
     private Lantern() {
     }
