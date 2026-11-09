@@ -26,6 +26,7 @@ public final class GameWindow {
         frame.add(renderer);
         frame.setSize(sizeFor(screen.width, screen.height));
         frame.setLocationRelativeTo(null);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.addKeyListener(new Input(state));
         frame.setVisible(true);
         new GameLoop(state, renderer::repaint).start();
