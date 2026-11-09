@@ -33,7 +33,6 @@ public final class HighScore {
             Files.createDirectories(file.getParent());
             Files.writeString(file, Integer.toString(score));
         } catch (IOException e) {
-            System.err.println("Could not save the high score: " + e.getMessage());
         }
     }
 }
