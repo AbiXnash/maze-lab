@@ -26,9 +26,6 @@ public final class HighScore {
 
     /** Keeps the score if it beats the best one. */
     public void offer(int score) {
-        if (score <= best()) {
-            return;
-        }
         try {
             Files.createDirectories(file.getParent());
             Files.writeString(file, Integer.toString(score));
