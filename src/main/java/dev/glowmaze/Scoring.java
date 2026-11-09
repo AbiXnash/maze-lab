@@ -13,7 +13,7 @@ public final class Scoring {
 
     /** Points for all the shades one flare has stunned so far: 100 for each. */
     public static int stunBonus(int stunnedByThisFlare) {
-        return STUN * Math.max(0, stunnedByThisFlare);
+        return stunnedByThisFlare <= 0 ? 0 : STUN * (1 << (stunnedByThisFlare - 1));
     }
 
     /** Lives after the score goes from before to after: one more for each 10,000 passed, at most five. */
