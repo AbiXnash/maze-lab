@@ -67,6 +67,7 @@ public final class GameState {
             wanted = -1;
         }
         if (centred && !open(px, py, dir)) {
+            turnBuffer--;
             return;
         }
         double d = Movement.speed(level) * dt;
