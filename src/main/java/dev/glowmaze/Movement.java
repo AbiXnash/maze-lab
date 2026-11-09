@@ -17,7 +17,7 @@ public final class Movement {
 
     /** Whether a coordinate is at the centre of a tile, where turning is allowed. */
     public static boolean atTileCenter(double pos) {
-        return Math.abs(pos - (Math.floor(pos) + 0.5)) < EPSILON;
+        return pos == Math.floor(pos) + 0.5;
     }
 
     /** Moves a coordinate by distance, stopping exactly on the next tile centre if it would pass it. */
