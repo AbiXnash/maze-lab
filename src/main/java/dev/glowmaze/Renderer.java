@@ -22,6 +22,7 @@ public final class Renderer extends JPanel {
         synchronized (state) {
             int tile = Math.max(1, Math.min(getWidth() / Maze.COLS, getHeight() / (Maze.ROWS + 1)));
             int light = Lantern.radius(state.secondsSinceFlare);
+            System.out.println("frame light=" + light + " tile=" + tile);
             int pc = (int) Math.floor(state.px);
             int pr = (int) Math.floor(state.py);
             for (int r = 0; r < Maze.ROWS; r++) {
