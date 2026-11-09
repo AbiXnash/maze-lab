@@ -2,7 +2,7 @@ package dev.glowmaze;
 
 /** Runs the game: logic in fixed steps of 1/60 s, drawing after each pass (spec rule 2). */
 public final class GameLoop implements Runnable {
-    public static final double STEP = 1.0 / 60.0;
+    public static final double STEP = 1.0 / 30.0;
     private static final int MAX_STEPS = 5;
     private final GameState state;
     private final Runnable draw;
