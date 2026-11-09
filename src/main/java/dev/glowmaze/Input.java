@@ -25,5 +25,8 @@ public final class Input extends KeyAdapter {
         if (key == "P") {
             state.togglePause();
         }
+        if (e.getKeyCode() == KeyEvent.VK_M) {
+            state.toggleMute();
+        }
     }
 }

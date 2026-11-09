@@ -33,6 +33,11 @@ public final class GameState {
         paused = !paused;
     }
 
+    /** M mutes and unmutes (spec rule 15). */
+    public synchronized void toggleMute() {
+        muted = !muted;
+    }
+
     /** One fixed step. While paused nothing moves and no clock runs (spec rule 5). */
     public synchronized void update(double dt) {
         secondsSinceFlare += dt;
