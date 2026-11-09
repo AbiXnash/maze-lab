@@ -29,3 +29,9 @@ Arrows move, P pauses, M mutes.
 | `Renderer`, `Input` | drawing and keys |
 
 The rules every part follows are in [docs/SPEC.md](docs/SPEC.md). See [CONTRIBUTING.md](CONTRIBUTING.md) to help.
+
+## About this repository
+
+This is a test project for [Codist](https://github.com/AbiXnash/codist), built commit by commit by
+`testbed/make_maze_lab.py` in [codist-eval](https://github.com/AbiXnash/codist-eval). Some commits contain
+planted bugs; the answer key and the scores are kept in codist-eval, not here.
