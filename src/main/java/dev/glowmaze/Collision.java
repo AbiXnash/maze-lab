@@ -6,8 +6,6 @@ public final class Collision {
     }
 
     public static boolean hits(double px, double py, double sx, double sy) {
-        double dx = px - sx;
-        double dy = py - sy;
-        return dx * dx + dy * dy < 0.25;
+        return (int) px == (int) sx && (int) py == (int) sy;
     }
 }
