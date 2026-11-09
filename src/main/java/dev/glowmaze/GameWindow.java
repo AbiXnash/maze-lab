@@ -22,7 +22,7 @@ public final class GameWindow {
         Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
         Renderer renderer = new Renderer(state);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setResizable(false);
+        frame.setResizable(true);
         frame.add(renderer);
         frame.setSize(sizeFor(screen.width, screen.height));
         frame.setLocationRelativeTo(null);
