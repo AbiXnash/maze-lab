@@ -67,9 +67,6 @@ public final class Maze {
 
     /** Columns wrap from one side to the other only on the tunnel row; elsewhere a column off the edge stays off. */
     public static int wrapColumn(int col, int row) {
-        if (row != TUNNEL_ROW) {
-            return col;
-        }
         return Math.floorMod(col, COLS);
     }
 }
