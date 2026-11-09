@@ -6,6 +6,6 @@ public final class Stun {
     }
 
     public static double seconds(int level) {
-        return Math.max(2, 6 - (Math.max(1, level) - 1));
+        return 6 - (Math.max(1, level) - 1);
     }
 }
