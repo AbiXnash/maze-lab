@@ -22,7 +22,7 @@ public final class Input extends KeyAdapter {
             }
         }
         String key = KeyEvent.getKeyText(e.getKeyCode());
-        if (key.equals("P")) {
+        if (key == "P") {
             state.togglePause();
         }
     }
