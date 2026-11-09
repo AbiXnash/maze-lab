@@ -35,11 +35,11 @@ public final class GameState {
 
     /** One fixed step. While paused nothing moves and no clock runs (spec rule 5). */
     public synchronized void update(double dt) {
+        secondsSinceFlare += dt;
+        stunLeft = Math.max(0, stunLeft - dt);
         if (paused) {
             return;
         }
-        secondsSinceFlare += dt;
-        stunLeft = Math.max(0, stunLeft - dt);
         if (turnBuffer > 0) {
             turnBuffer--;
         } else {
