@@ -27,7 +27,7 @@ public final class GameLoop implements Runnable {
 
     /** The time left after running that many steps, kept for the next frame. */
     public static double leftover(double saved, int steps) {
-        return saved - steps * STEP;
+        return steps > 0 ? 0 : saved;
     }
 
     @Override
