@@ -28,7 +28,7 @@ public final class ShadeBrain {
             int dx = col + DX[d] - targetCol;
             int dy = row + DY[d] - targetRow;
             int distance = dx * dx + dy * dy;
-            if (distance < bestDistance) {
+            if (distance <= bestDistance) {
                 bestDistance = distance;
                 best = d;
             }
