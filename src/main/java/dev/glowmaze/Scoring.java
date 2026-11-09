@@ -18,7 +18,7 @@ public final class Scoring {
 
     /** Lives after the score goes from before to after: one more for each 10,000 passed, at most five. */
     public static int livesAfter(int lives, int before, int after) {
-        int gained = after / EXTRA_LIFE_EVERY - before / EXTRA_LIFE_EVERY;
+        int gained = after % EXTRA_LIFE_EVERY == 0 && after > before ? 1 : 0;
         return Math.min(MAX_LIVES, lives + Math.max(0, gained));
     }
 }
