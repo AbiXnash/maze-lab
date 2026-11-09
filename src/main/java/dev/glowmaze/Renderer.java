@@ -23,11 +23,11 @@ public final class Renderer extends JPanel {
             int tile = 16;
             int light = Lantern.radius(state.secondsSinceFlare);
             System.out.println("frame light=" + light + " tile=" + tile);
-            int pc = (int) Math.floor(state.px);
-            int pr = (int) Math.floor(state.py);
+            int playerCol = (int) Math.floor(state.px);
+            int playerRow = (int) Math.floor(state.py);
             for (int r = 0; r < Maze.ROWS; r++) {
                 for (int c = 0; c < Maze.COLS; c++) {
-                    if (Math.abs(c - pc) + Math.abs(r - pr) > light) {
+                    if (Math.abs(c - playerCol) + Math.abs(r - playerRow) > light) {
                         continue;
                     }
                     char t = Maze.LAYOUT[r].charAt(c);
